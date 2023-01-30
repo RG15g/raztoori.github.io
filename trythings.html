@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    .btn {
+      background-color: white;
+      border: none;
+      border-radius: 50% 50% 50% 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .heart {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50% 50% 50% 50%;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      transform: rotate(45deg);
+      :before,
+      :after {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50% 50% 50% 50%;
+        position: absolute;
+      }
+      :before {
+        top: -25px;
+        left: 0;
+      }
+      :after {
+        left: -25px;
+        top: 0;
+      }
+    }
+    h1 {
+      font-size: 72px;
+      color: white;
+      text-shadow: 2px 2px black;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>I love you, would you want to be my girlfriend?</h1>
+    <form method="post">
+      <input type="submit" name="yes" class="btn" value="">
+      <div class="heart"></div>
+      <input type="submit" name="no" class="btn" value="">
+      <div class="heart"></div>
+    </form>
+    <?php
+      if (isset($_POST['yes'])) {
+        $to = "razgold7@gmail.com";
+        $subject = "Yes button pressed";
+        $message = "The user pressed the Yes button";
+        $header = "From: razgold7@gmail.com";
+        mail($to, $subject, $message, $header);
+      }
+      if (isset($_POST['no'])) {
+        $to = "razgold7@gmail.com";
+        $subject = "No button pressed";
+        $message = "The user pressed the No button";
+        $header = "From: razgold7@gmail.com";
+        mail($to, $subject, $message, $header);
+      }
+    ?>
+  </div>
+</body>
+</html>
