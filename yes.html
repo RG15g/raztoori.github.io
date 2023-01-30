@@ -1,0 +1,68 @@
+<html>
+  <head>
+  <title> I LOVE • MY ORI </title>
+	<link rel="icon" type="image/png" href="https://www.nicepng.com/png/detail/33-337274_download-blow-kiss-emoji-kiss-emoji.png">
+
+    <style>
+      body {
+          background-image: url('https://lh3.google.com/pw/AMWts8CmVq8MWgVlD3Sj9g0moPwDBDH-gUjLICwGpffoQCkAXGelpCTuBgwkWyasQE1GFJbRVikRK4y_RBbem2Z39zzzLOgQx3c=w1250-h937-no?authuser=0');
+		   background-size: cover;
+			height: 100vh;
+			display: flex;
+  justify-content: center;
+  align-items: center;
+      }
+            #text {
+	    font-weight: bold;
+        color: black;
+        font-size: 40px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+	  #timer {
+	    font-weight: bold;
+        color: black;
+        font-size: 50px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+      #text {
+	    font-weight: bold;
+        color: black;
+        font-size: 40px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+	<div id="text">!!!!ישששששש</div>
+      <div id="timer"></div>
+	  <div id="text">Time until you'll get a huge hug and kiss from me</div>
+    </div>
+
+    <script>
+      const countDownDate = new Date("Feb 9, 2023").getTime();
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+  
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+        document.getElementById("timer").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
