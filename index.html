@@ -1,41 +1,26 @@
 <html>
   <head>
-  <title> I LOVE • MY ORI </title>
-	<link rel="icon" type="image/png" href="logo_yes.png">
-
+	<meta property="og:image" content="preview_show.jpg"/>
+	<title> ♡ • ♡ </title>
+	<link rel="icon" type="image/png" href="logo_index.png">
     <style>
       body {
-          background-image: url('background.jpg');
-		   background-position: center;
-		   background-size: cover;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-            #text {
-	    font-weight: bold;
-        color: black;
-        font-size: 100px;
+
+      h1 {
+		font-weight: bold;
+        color: white;
+        font-size: 40px;
         text-align: center;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
       }
-	  #timer {
-	    font-weight: bold;
-        color: black;
-        font-size: 110px;
-        text-align: center;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-      }
-      #text {
-	    font-weight: bold;
-        color: black;
-        font-size: 100px;
-        text-align: center;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-      }
-	  
-	  .buttons {
+
+      .buttons {
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -62,44 +47,41 @@
     </style>
   </head>
   <body>
-    <div>
-	<div id="text">!!!!ישששששש</div>
-      <div id="timer"></div>
-	  <div id="text">Until you get a huge hug from me and lots of kisses all over your face!!</div>
+  
+    <h1>I love you, would you like to be my girlfriend?</h1>
     <div class="buttons">
-      <button id="yes">Back to the question page</button>
-      
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
     </div>
     <div class="yes-selected">
     </div>
-	<div class="btn" onclick="window.location.href='question.html'">Yes</div>
+	<div class="btn" onclick="window.location.href='yes.html'">Yes</div>
 	
-	</div>
     <script>
-      const countDownDate = new Date("Feb 9, 2023").getTime();
-      const x = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = countDownDate - now;
-  
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-        document.getElementById("timer").innerHTML =
-          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("timer").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-	  
-	  document.getElementById("yes").addEventListener("click", function() {
-        window.location.href='question.html';
-		});
+	
+	
+      document.getElementById("yes").addEventListener("click", function() {
+        alert("Im happy to hear");
+      });
+       document.getElementById("yes").addEventListener("click", function() {
+        alert("אני אוהב אותך כל כך אורי");
+      });
+        document.getElementById("yes").addEventListener("click", function() {
+        alert("I know it's exhausting, I hate it too. Let's make it work, in a way that works for you of us.");
+      });
+	      document.getElementById("yes").addEventListener("click", function() {
+        alert("הבקשה היחידה שלי ממך היא שתחייכי, תישארי אופטימית וחיובית. עלינו, ועל השנה הזאת.");
+      });
+	document.getElementById("yes").addEventListener("click", function() {
+        window.location.href='yes.html';
+      });
+      document.getElementById("no").addEventListener("click", function() {
+        alert("Ok, I respect it. Just want you to know that I will always be here for you. I will always love you Ori");
+      });
+	  document.getElementById("no").addEventListener("click", function() {
+        alert("I will never stop loving you");
+      });
+
     </script>
   </body>
 </html>

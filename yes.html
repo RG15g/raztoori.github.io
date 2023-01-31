@@ -1,0 +1,108 @@
+<html>
+  <head>
+  <title> I LOVE • MY ORI </title>
+	<link rel="icon" type="image/png" href="logo_yes.png">
+
+    <style>
+      body {
+          background-image: url('background.jpg');
+		   background-position: center;
+		   background-size: cover;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+      }
+            #text {
+	    font-weight: bold;
+        color: black;
+        font-size: 100px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+	  #timer {
+	    font-weight: bold;
+        color: black;
+        font-size: 110px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+      #text {
+	    font-weight: bold;
+        color: black;
+        font-size: 100px;
+        text-align: center;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+	  
+	  .buttons {
+        display: flex;
+        justify-self: start;
+        margin-top: 0px;
+      }
+
+      button {
+          position: absolute;
+		  left: 50px;
+		  top: 20px;
+		padding: 10px 20px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+		margin: 0 30px;
+      }
+
+      img {
+        display: none;
+      }
+
+      .yes-selected img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+	<div id="text">!!!!ישששששש</div>
+      <div id="timer"></div>
+	  <div id="text">Until you get a huge hug from me and lots of kisses all over your face!!</div>
+    <div class="buttons">
+      <button id="yes">Back to the question page</button>
+      
+    </div>
+    <div class="yes-selected">
+    </div>
+	<div class="btn" onclick="window.location.href='index.html'">Yes</div>
+	
+	</div>
+    <script>
+      const countDownDate = new Date("Feb 9, 2023").getTime();
+      const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+  
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+        document.getElementById("timer").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+	  
+	  document.getElementById("yes").addEventListener("click", function() {
+        window.location.href='index.html';
+		});
+    </script>
+  </body>
+</html>
