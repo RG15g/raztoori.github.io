@@ -1,7 +1,14 @@
 <html>
   <head>
-  	  	<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFBSZVSDY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FMFBSZVSDY');
+</script>
 	<meta property="og:image" content="preview_show.jpg"/>
 	<title> ♡ • ♡ </title>
 	<link rel="icon" type="image/png" href="logo_index.png">
@@ -96,18 +103,6 @@
 	<div class="btn" onclick="window.location.href='yes.html'">Yes</div>
 
     <script>
-	 window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FMFBSZVSDY');
-  
-  document.getElementById("yes").addEventListener("click", function() {
-  gtag('event', 'click', {
-    'event_category': 'Button',
-    'event_label': 'Yes button clicked'
-  });
-});
 	
       document.getElementById("yes").addEventListener("click", function() {
         alert("Im happy to hear");
