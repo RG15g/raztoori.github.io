@@ -12,8 +12,25 @@
         align-items: center;
         height: 100vh;
       }
+	  img {
+	    width = 60px;
+		height = 60px;
+		position: absolute;
+		left: 500;
+		top: 30;
+	  }
+	
 
       h1 {
+		font-weight: bold;
+        color: white;
+        font-size: 40px;
+        text-align: center;
+      }
+	  h2 {
+	  position: absolute;
+		  left: 50px;
+		  top: 20px;
 		font-weight: bold;
         color: white;
         font-size: 40px;
@@ -37,18 +54,20 @@
 		margin: 0 30px;
       }
 
-      img {
-        display: none;
-      }
-
+ 
       .yes-selected img {
         display: block;
       }
     </style>
   </head>
-  <body>
   
+  <body>
+	<img src="sad.png" alt="NOT WORKING" width=100px; height=100px/>
     <h1>I love you, would you like to be my girlfriend?</h1>
+	<!--- <h2> My heart status: </h2> --->
+	<h2> Mood about us right now: </h2>
+	<!--- <img src="broken_heart.png" alt="NOT WORKING" width=100px; height=100px/> --->
+	
     <div class="buttons">
       <button id="yes">Yes</button>
       <button id="no">No</button>
