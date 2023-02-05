@@ -91,9 +91,14 @@
     <div class="yes-selected">
     </div>
 	<div class="btn" onclick="window.location.href='yes.html'">Yes</div>
-	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMFBSZVSDY"></script>
     <script>
-	
+	 window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FMFBSZVSDY');
 	
       document.getElementById("yes").addEventListener("click", function() {
         alert("Im happy to hear");
