@@ -1,1 +1,2 @@
-This is the website that raz made for ori when he had to wait for her response if she wants to keep try to be together or to give up.
+This is the website that raz made for ori when he waited for her to response if she wants to keep try to be together or give up.
+The website is offline cause we're no longer together...
